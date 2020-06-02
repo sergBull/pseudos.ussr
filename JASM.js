@@ -46,12 +46,13 @@ function getKeyFromMemSector(name) {
 }
 
 function parseCode(text) {
+	var type = text.split("<")[0];
 	var blocks = text.split("<")[1];
 	blocks = blocks.split(">")[0];
 	blocks = blocks.split(";");
 	
 	for (var i = 0; i < blocks.length; i++) {
-		document.write(blocks[i]);
+		document.write(type + ": " + blocks[i]);
 	}
 }
 
