@@ -1,3 +1,3 @@
 <?php
-	echo "PseuDOS.USSR";
+	include("index.html");
 ?>
