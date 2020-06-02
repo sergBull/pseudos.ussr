@@ -1,5 +1,5 @@
 function loadFile() {
-	parseCode("mov a, b");
+	parseCode("a:\nmov a b");
 }
 
 loadFile();
