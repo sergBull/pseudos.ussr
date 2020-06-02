@@ -46,36 +46,12 @@ function getKeyFromMemSector(name) {
 }
 
 function parseCode(text) {
-	var cmds = text.split("\n");
+	var blocks = text.split("<")[1];
+	blocks = blocks.split(">")[0];
+	blocks = blocks.split(";");
 	
-	for (var i = 0; i < cmds.length; i++) {
-		var comment = /^;(.*)/;
-		var digit = /(-)\d*\.\d*/;
-		var eol = /,/;
-		var label = /(\w+|_)\d*:/;
-		var str = /"(.*)"/;
-		var whitespace = /\s+|\t+|\v+/;
-		var word = /[a-zA-Z][0-9]/;
-		
-		var obj = cmds[i].split(whitespace);
-		
-		if (label.test(obj[0])) {
-			createLabel(obj[0].replace(":", ""));
-		}
-		
-		if (word.test(obj[0])) {
-			switch (obj[0]) {
-				case "mov": {
-					var a = getKeyFromMemSection(word.test(obj[1]));
-					var b = getDataFromMemSection(word.test(obj[2]));
-					
-					deleteDataFromMemSector(a);
-					addDataToMemSector(a, b);
-					
-					alert(a);
-				}
-			}
-		}
+	for (var i = 0; i < blocks.length; i++) {
+		document.write(blocks[i]);
 	}
 }
 
