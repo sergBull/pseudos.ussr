@@ -59,15 +59,15 @@ function parseCode(text) {
 		
 		var obj = cmds[i].split(whitespace);
 		
-		if (label.expr(obj[0])) {
+		if (label.test(obj[0])) {
 			createLabel(label.replace(":", ""));
 		}
 		
-		if (word.expr(obj[0])) {
+		if (word.test(obj[0])) {
 			switch (obj[0]) {
 				case "mov": {
-					var a = getKeyFromMemSection(word.expr(obj[1]));
-					var b = getDataFromMemSection(word.expr(obj[2]));
+					var a = getKeyFromMemSection(word.test(obj[1]));
+					var b = getDataFromMemSection(word.test(obj[2]));
 					
 					deleteDataFromMemSector(a);
 					addDataToMemSector(a, b);
