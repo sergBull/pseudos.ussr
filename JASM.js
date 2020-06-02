@@ -57,7 +57,7 @@ function parseCode(text) {
 		var whitespace = /\s+|\t+|\v+/;
 		var word = /[a-zA-Z][0-9]/;
 		
-		var obj = cmds[i].split("");
+		var obj = cmds[i].split(whitespace);
 		
 		if (label.expr(obj[0])) {
 			createLabel(label.replace(":", ""));
