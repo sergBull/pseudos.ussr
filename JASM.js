@@ -53,7 +53,7 @@ function parseCode(text) {
 		var digit = /(-)\d*\.\d*/;
 		var eol = /,/;
 		var label = /(\w+|_)\d*:/;
-		var str = /"(.*)/";
+		var str = /"(.*)"/;
 		var whitespace = /\s+|\t+|\v+/;
 		var word = /[a-zA-Z][0-9]/;
 		
