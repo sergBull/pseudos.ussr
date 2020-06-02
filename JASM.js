@@ -60,7 +60,7 @@ function parseCode(text) {
 		var obj = cmds[i].split(whitespace);
 		
 		if (label.test(obj[0])) {
-			createLabel(label.replace(":", ""));
+			createLabel(obj[0].replace(":", ""));
 		}
 		
 		if (word.test(obj[0])) {
