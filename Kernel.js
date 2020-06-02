@@ -1,5 +1,5 @@
 function loadFile() {
-	parseCode("<a, b, c>");
+	parseCode("data<a, b, c>;code<d, e, f>");
 }
 
 loadFile();
