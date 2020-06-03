@@ -85,4 +85,4 @@ function setVideoMode(mode) {
 }
 
 setVideoMode(0x090);
-setBgColor(Colors.currentColor);
+setBgColor(Colors.cga[1]);
