@@ -63,6 +63,7 @@ function rgb(color) {
 
 function setBgColor(color) {
 	ctx.fillStyle = "rgb(" + rgb(color).join(", ") + ")";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function setCurrentColor(color) {
