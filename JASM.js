@@ -8,7 +8,11 @@ var Colors = {
 	],
 	currentColor: 0
 };
+var GraphicalMode = {};
 var MemSector = window.localStorage;
+var TextMode = {
+	textSize: [ 0, 0 ]
+};
 var VideoModes = [
 	0x090, // CGA 40x25x16 8x8 Text
 	0x092, // CGA 80x25x16 8x8 Text
@@ -72,8 +76,17 @@ function setVideoMode(mode) {
 		
 		ColorDepth = 16;
 		
+		TextMode.textSize[0] = 8;
+		TextMode.textSize[1] = 8;
+		
+		for (var i = 0; i < Colors.cga.length; i++) {
+			if (Colors.currentColor != Colors.cga[i]) setCurrentColor(0x000000);
+		}
+		
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	}
 }
 
+setCurrentColor(cga[1]);
 setVideoMode(0x090);
+setBgColor(Colors.currentColor);
