@@ -80,14 +80,9 @@ function setVideoMode(mode) {
 		TextMode.textSize[0] = 8;
 		TextMode.textSize[1] = 8;
 		
-		for (var i = 0; i < Colors.cga.length; i++) {
-			if (Colors.currentColor != Colors.cga[i]) setCurrentColor(0x000000);
-		}
-		
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	}
 }
 
-setCurrentColor(Colors.cga[1]);
 setVideoMode(0x090);
 setBgColor(Colors.currentColor);
