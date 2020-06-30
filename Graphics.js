@@ -41,7 +41,7 @@ var Graphics = function() {
 	
 	Graphics.prototype.setPixel = function(x, y, arw, arh, r, g, b) {
 		this._(key).ctx.fillStyle = "rgb(" + [ r, g, b ].join(", ") + ")";
-		this._(key).ctx.fillRect(x + arw, y + arh, arw, arh);
+		this._(key).ctx.fillRect(x * arw, y * arh, arw, arh);
 	};
 	
 	return Graphics;
