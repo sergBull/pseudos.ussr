@@ -36,12 +36,12 @@ var Graphics = function() {
 		var g = (rgb >> 8) & 0xFF;
 		var b = rgb & 0xFF;
 		
-		alert("rgb(" + [ r, g, b ].join(", ") + ")");
+		this._(key).ctx.fillRect(0, 0, this.width, this.height);
 	}
 	
 	return Graphics;
 }();
 
 var g = new Graphics();
-g.init(240, 320);
+g.init(640, 480);
 g.setClearColor(0xFF7F3F);
