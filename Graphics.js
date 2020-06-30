@@ -15,7 +15,7 @@ var Graphics = function() {
 		this._ = private();
 		this._(key).canvas = document.createElement("canvas");
 		
-		document.body.appendChild(this._);
+		document.body.appendChild(this._(key).canvas);
 		
 		this._(key).ctx = this._(key).canvas.getContext("2d");
 		
