@@ -44,4 +44,4 @@ var Graphics = function() {
 
 var g = new Graphics();
 g.init(240, 320);
-g.setCearColor(0xFF7F3F);
+g.setClearColor(0xFF7F3F);
