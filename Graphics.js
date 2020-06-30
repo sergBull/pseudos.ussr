@@ -50,4 +50,4 @@ var Graphics = function() {
 var g = new Graphics();
 g.init(640, 480);
 g.setClearColor(0xFF7F3F);
-g.setPixel(0, 0, 32, 32, 255, 127, 63);
+g.setPixel(0, 0, 1, 1, 255, 255, 255);
