@@ -38,6 +38,8 @@ var Graphics = function() {
 		
 		alert("rgb(" + [ r, g, b ].join(", ") + ")");
 	}
+	
+	return Graphics;
 }();
 
 var g = new Graphics();
