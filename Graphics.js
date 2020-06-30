@@ -37,7 +37,12 @@ var Graphics = function() {
 		var b = rgb & 0xFF;
 		
 		this._(key).ctx.fillRect(0, 0, this.width, this.height);
-	}
+	};
+	
+	Graphics.prototype.setPixel = function(x, y, arw, arh, r, g, b) {
+		this._(key).ctx.fillStyle = "rgb(" + [ r, g, b ].join(", ") + ")";
+		this._(key).ctx.fillRect(x + arw, y + arh, arw, arh);
+	};
 	
 	return Graphics;
 }();
@@ -45,3 +50,4 @@ var Graphics = function() {
 var g = new Graphics();
 g.init(640, 480);
 g.setClearColor(0xFF7F3F);
+g.setPixel(0, 0, 32, 32, 255, 127, 63);
